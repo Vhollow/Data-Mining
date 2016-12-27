@@ -7,7 +7,7 @@
 		-1,-1,-1;
 		1,1,-1;
 	];
-#Matriz con los puntos qu actuar醤 como patrones a reconocer
+#Matriz con los puntos que actuar谩n como patrones a reconocer
 	patrones = [
 		1,-1,1;
 		-1,1,-1;
@@ -29,15 +29,15 @@
 		end;
 	end;
 
-#Clasificaci髇
+#Clasificaci贸n
 	for e=1:6
 		s = [];
 		s = entradas(e,:);
 		do
 			s_ant = s;
-      #Iteraci髇 sobre los elementos del vector
+      #Iteraci贸n sobre los elementos del vector
 			for i = 1:3
-        #Signo con la evoluci髇 de estado
+        #Signo con la evoluci贸n de estado
 				temp = 0;
 				for j = 1:3
 					temp += w(i,j)*s_ant(j);
@@ -49,7 +49,7 @@
 					s(i) = -1;
 				endif;
 			end;
-      #Comparaci髇 del vector estado con el anterior
+      #Comparaci贸n del vector estado con el anterior
       a = length(s)- sum(s == s_ant) ;
 		until( a == 0)
 		s
